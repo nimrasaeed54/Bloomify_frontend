@@ -11,7 +11,8 @@ const CategorySection = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await fetch("http://localhost:5000/products");
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/products`);
+
         const data = await res.json();
 
         const categoryMap = {};

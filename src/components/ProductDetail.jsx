@@ -17,7 +17,7 @@ export default function ProductDetail() {
     addToCart(product, quantity);
   };
 
-    const handleBuyNow = () => {
+  const handleBuyNow = () => {
     addToCart(product, quantity); // ✅ Add product first
     navigate("/cart"); // ✅ Redirect to cart after adding
   };
@@ -27,7 +27,8 @@ export default function ProductDetail() {
   useEffect(() => {
     async function fetchProduct() {
       try {
-        const res = await fetch(`http://localhost:5000/products/${id}`);
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/products/${id}`);
+
         if (!res.ok) throw new Error(`Product not found (status: ${res.status})`);
         const data = await res.json();
         setProduct(data);

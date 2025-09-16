@@ -8,13 +8,13 @@ const flowers = [
   {
     title: "Roses",
     image: hero1,
-    color: "#f50556",
+    color: "#ce0044",
     text: "Timeless symbols of love and beauty",
   },
   {
     title: "Carnation",
     image: "/images/mix.png",
-    color: "#FF69B4",
+    color: "#a80aa8",
     text: "A timeless symbol of admiration and gratitude.",
   },
   {
