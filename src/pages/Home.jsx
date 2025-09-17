@@ -34,15 +34,11 @@ export default function Home() {
       <Hero />
 
      
-      <motion.div
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-     viewport={{ once: false, amount: 0.3 }}
-  onViewportLeave={(entry) => entry.target.style.opacity = 0}
+      <div
+  
       >
         <CategorySection />
-      </motion.div>
+      </div>
 
       <motion.div
         variants={sectionVariants}
